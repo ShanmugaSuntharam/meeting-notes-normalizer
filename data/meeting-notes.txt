@@ -1,0 +1,6 @@
+Title: Checkout Reliability Review
+Owner: Riya
+Date: 2026-08-24
+Attendees: Riya, Sam, Noor
+Decisions: Add retry logging; create a payment failure dashboard
+Actions: Sam|Add structured logs|2026-08-26; Noor|Draft dashboard|2026-08-28
