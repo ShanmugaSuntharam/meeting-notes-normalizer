@@ -7,7 +7,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from src.meeting_notes import MeetingNotesError, parse_notes, read_notes, save_summary
+from src.learner_notes import MeetingNotesError, parse_notes, read_notes, save_summary
 
 
 def build_parser() -> argparse.ArgumentParser:

@@ -11,17 +11,17 @@ Python program that reads a meeting-notes text file, extracts title, owner, date
 ├── output/                    # generated JSON (created on run)
 │   └── meeting-summary.json
 ├── src/
-│   ├── main.py                # CLI entry point
-│   └── meeting_notes.py       # read_notes, parse_notes, save_summary
+│   └── learner_notes.py       # read_notes, parse_notes, save_summary
 ├── tests/
 │   └── test_meeting_notes.py
 │   └── test_meeting_notes_pytest.py
+├── main.py                    # CLI entry point
 └── README.md
 ```
 
 This follows common Python conventions: lowercase folder names, `src/` for code, `tests/` for unit tests, `data/` for sample input, and `output/` for generated files.
 
-There is no `utils/` folder. Shared helpers (`_split_list`, `_parse_actions`) live next to the parser in `src/meeting_notes.py`. A utilities package is worth adding only when a second module needs the same helpers.
+There is no `utils/` folder. Shared helpers (`_split_list`, `_parse_actions`) live next to the parser in `src/learner_notes.py`. A utilities package is worth adding only when a second module needs the same helpers.
 
 Run commands from the repository root so the default `data/` and `output/` paths resolve correctly.
 
@@ -62,14 +62,14 @@ No virtual environment or `pip install` is needed.
 Default paths (`data/meeting-notes.txt` → `output/meeting-summary.json`):
 
 ```bash
-python src/main.py
+python main.py
 ```
 
 Custom input path (and optional output path):
 
 ```bash
-python src/main.py data/meeting-notes.txt
-python src/main.py path/to/notes.txt -o output/meeting-summary.json
+python main.py data/meeting-notes.txt
+python main.py path/to/notes.txt -o output/meeting-summary.json
 ```
 
 The `output/` directory is created automatically if it does not exist.

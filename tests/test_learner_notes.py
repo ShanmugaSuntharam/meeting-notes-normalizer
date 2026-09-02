@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from meeting_notes import (  # noqa: E402
+from learner_notes import (  # noqa: E402
     MeetingNotesError,
     parse_notes,
     read_notes,

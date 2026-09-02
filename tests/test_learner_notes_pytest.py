@@ -7,7 +7,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import pytest
 
-from meeting_notes import MeetingNotesError, parse_notes, read_notes, save_summary
+from learner_notes import MeetingNotesError, parse_notes, read_notes, save_summary
 
 
 SAMPLE_NOTES = """Title: Checkout Reliability Review
