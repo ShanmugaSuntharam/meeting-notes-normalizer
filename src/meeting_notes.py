@@ -36,12 +36,7 @@ class MeetingNotesError(ValueError):
 
 def read_notes(path: Path) -> str:
     """Read meeting notes from *path* using pathlib."""
-    if not path.is_file():
-        raise FileNotFoundError(
-            f"Meeting notes file not found: {path}\n"
-            "Provide a path to an existing text file, for example: "
-            "python3 src/main.py data/meeting-notes.txt"
-        )
+
     return path.read_text(encoding="utf-8")
 
 
