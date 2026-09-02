@@ -119,4 +119,4 @@ def parse_notes(text: str) -> dict[str, Any]:
 def save_summary(summary: dict[str, Any], path: Path) -> None:
     """Write *summary* as indented JSON, creating the output directory if needed."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(summary,  ensure_ascii=False) + "\n", encoding="utf-8")
