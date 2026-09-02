@@ -7,7 +7,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from meeting_notes import MeetingNotesError, parse_notes, read_notes, save_summary
+from src.meeting_notes import MeetingNotesError, parse_notes, read_notes, save_summary
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -44,7 +44,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Invalid meeting notes: {exc}", file=sys.stderr)
         return 1
 
-    print(f"Wrote meeting summary to {args.output}")
+    print(f"Created: {args.output}")
     return 0
 
 
