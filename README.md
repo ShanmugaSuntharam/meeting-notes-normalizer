@@ -13,8 +13,8 @@ Python program that reads a meeting-notes text file, extracts title, owner, date
 ├── src/
 │   └── learner_notes.py       # read_notes, parse_notes, save_summary
 ├── tests/
-│   └── test_meeting_notes.py
-│   └── test_meeting_notes_pytest.py
+│   └── test_learner_notes.py
+│   └── test_learner_notes_pytest.py
 ├── main.py                    # CLI entry point
 └── README.md
 ```
@@ -78,7 +78,7 @@ The `output/` directory is created automatically if it does not exist.
 
 ```bash
 python -m unittest discover -s tests -v
-python -m pytest tests/test_meeting_notes.py -v
+python -m pytest tests/test_learner_notes.py -v
 ```
 
 ## Program structure
@@ -86,3 +86,7 @@ python -m pytest tests/test_meeting_notes.py -v
 - `read_notes(path)` — reads the file with `pathlib.Path`
 - `parse_notes(text)` — returns a dictionary with lists for attendees, decisions, and actions
 - `save_summary(summary, path)` — writes indented JSON and creates parent directories
+
+## Reflection
+
+Initially, developed this program in response to the earlier assignment and hence, developed at my free will. Later this assignment was created with automatic evaluation and hence, to follow the strict guidelines, lot of changes had to be done, for e.g. read_notes should NOT handle FileNotFound error, main.py should NOT be on the root. While mostly, I was able to cover the requirements, things like this Reflection, which I had missed out, was able to fix it ONLY after the failure. 
